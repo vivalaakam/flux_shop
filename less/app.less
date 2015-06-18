@@ -1,0 +1,107 @@
+@import url(http://fonts.googleapis.com/css?family=Exo+2&subset=cyrillic,latin);
+@main-color: #03a9f4;
+@header-size: 64px;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Exo 2', sans-serif;
+}
+.b-header {
+    height: @header-size;
+    background-color: @main-color;
+    position: relative;
+    .b-header__name {
+        color: #fff;
+        font-size: 24px;
+        line-height: 64px;
+        padding-left: 10px;
+    }
+}
+.b-header_cart {
+    width: 300px;
+    height: 100%;
+    top: 0;
+    right: 120px;
+    position: absolute;
+    &.b-active {
+        background-color: @main-color;
+    }
+    .b-header_cart__name {
+        line-height: @header-size;
+        cursor: pointer;
+        color: #fff;
+        font-size: 24px;
+    }
+    .b-header_cart__items {
+        width: 100%;
+        border: 1px solid @main-color;
+        background-color: #fff;
+    }
+}
+.b-items {
+
+}
+.b-item {
+    width: 25%;
+    max-width: 250px;
+    box-sizing: border-box;
+    padding: 5px;
+    display: inline-block;
+    .b-item__add {
+        .b-button;
+        width: 100%;
+    }
+}
+.b-reset {
+    height: 30px;
+    box-sizing: border-box;
+    padding: 6px;
+    text-align: center;
+    font-size: 14px;
+    font-family: Helvetica;
+    text-transform: uppercase;
+    &:focus {
+        outline: 0;
+    }
+}
+.b-button {
+    .b-reset;
+    color: #fff;
+    background-color: @main-color;
+    border: none;
+}
+.b-input {
+    .b-reset;
+    color: #56bf84;
+    background-color: #fff;
+    border: 1px solid @main-color;
+}
+.b-cart {
+    .b-cart__add {
+        .b-button;
+        width: 100%;
+    }
+    .b-cart__increase,
+    .b-cart__decrease {
+        .b-button;
+        width: 25%;
+        max-width: 60px;
+    }
+    .b-cart__input {
+        .b-input;
+        width: 50%;
+        max-width: 130px;
+    }
+    .b-cart__add,
+    .b-cart__increase,
+    .b-cart__decrease,
+    .b-cart__input {
+        font-weight: bold;
+    }
+}
+.b-header_cart__item {
+    .b-cart {
+        width: 100px;
+    }
+}
